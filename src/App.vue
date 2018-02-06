@@ -1,13 +1,17 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
-  </div>
+    <div id="app">
+        <cart-nav></cart-nav>
+        <router-view/>
+    </div>
 </template>
 
 <script>
+import Nav from '@/components/Nav'
 export default {
-  name: 'App'
+    name: 'App',
+    components:{
+        'cart-nav':Nav
+    }
 }
 </script>
 
@@ -18,6 +22,19 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
+.clearfix:after {
+  content: " ";
+  display: block;
+  clear: both;
+  height: 0;
+}
+a{ 
+  text-decoration:none; 
+  color:#333; 
+} 
+ul{
+  list-style-type:none;
+}
+
 </style>
